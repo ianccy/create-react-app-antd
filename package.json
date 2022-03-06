@@ -17,10 +17,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/eslint .",
-    "eslintInit": "eslint --init",
-    "prepare": "husky install",
-    "create-hook": "husky add .husky/pre-commit \"npm test\""
+    "lint": "./node_modules/.bin/eslint ."
   },
   "lint-staged": {
     "src/*.{js,jsx}": [

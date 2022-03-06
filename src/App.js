@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import CustomButton from 'components/CustomButton';
+
+import logo from 'logo.svg';
+import 'App.less';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
