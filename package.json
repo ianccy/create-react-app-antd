@@ -21,12 +21,17 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint .",
-    "eslintInit": "eslint --init"
+    "eslintInit": "eslint --init",
+    "prepare": "husky install",
+    "create-hook": "husky add .husky/pre-commit \"npm test\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+  "lint-staged": {
+    "src/*.{js,jsx}": [
+      "npm run lint-staged:js",
+      "jest --bail --findRelatedTests"
+    ],
+    "src/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write"
     ]
   },
   "browserslist": {
